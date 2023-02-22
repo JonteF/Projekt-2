@@ -44,7 +44,7 @@ for z=1:2
     
         %Identifierar index för y < 0.05 och x > 10 och gör en lista.
         y_indices = find((u(2,:) < 0.05) & (u(1,:) > 10));
-        
+        Ymax__index = find(u(4,:)< 0.01 & u(4,:)> -0.01 );
         x_val(i) = u(1,y_indices(1));
     
     end
@@ -55,5 +55,7 @@ for z=1:2
     theta_b = theta(n) - theta(n)./(5.^z);
     
 end
-disp(theta(n));
-disp(max(x_val));
+disp(['vinkeln för maxlängden:', num2str(theta(n))]);
+disp(['längden i x-led:' , num2str(max(x_val))]);
+disp(['Max höjden:', num2str(max(u(2,:)))])
+disp(['tiden kulan har max höjd:',num2str((Ymax__index(1)+1)*k), 'sekunder'])
