@@ -68,6 +68,7 @@ while cond==0
         cond = 1;
         disp(['Vinkeln är: ', num2str(theta_m), ' grader.']);
         disp(['Längden i x-led är: ', num2str(u(1,y_indices(1))), ' m.']);
+        disp(['Tiden t^N för kulan att slå ner:', num2str((y_indices(1)+1).*k), sekunder]);
     end
     
 end
